@@ -1,0 +1,9 @@
+C:\Users\Misha\source\repos\Translate\Translate\bin\Debug\Translate.exe.config
+C:\Users\Misha\source\repos\Translate\Translate\bin\Debug\Translate.exe
+C:\Users\Misha\source\repos\Translate\Translate\bin\Debug\Translate.pdb
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.csprojAssemblyReference.cache
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.Properties.Resources.resources
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.csproj.GenerateResource.cache
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.csproj.CoreCompileInputs.cache
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.exe
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.pdb
