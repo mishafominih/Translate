@@ -8,21 +8,17 @@ namespace Translate
 {
     public class TranslateText
     {
-        public static string[] Text { get; private set; }
-
-        public TranslateText(string text)
-        {
-            Text = text.Split(' ');
-        }
-
         // Перевод самого текста 
-        public string GetTextTranslation()
+        public static string GetTextTranslation(string data)
         {
+            if (data == null || data.Length <= 0)
+                return "";
+            var text = data.Split(' ');
             var result = new StringBuilder();
-            result.Append(GetSentenceTranslation(Text[0]));
-            for(var i = 1; i < Text.Length; i++)
+            result.Append(GetSentenceTranslation(text[0]));
+            for(var i = 1; i < text.Length; i++)
             {
-                var sentence = GetSentenceTranslation(Text[i]);
+                var sentence = GetSentenceTranslation(text[i]);
                 result.Append(' ' + sentence);
             }
             return result.ToString();
@@ -31,11 +27,10 @@ namespace Translate
         // Переводим предложения 
         private static string GetSentenceTranslation(string sentence)
         {
-            string newSentence;
             var len = sentence.Length - 1;
             if (!Char.IsLetter(sentence, len))
-                return newSentence = GetWordTranslation(sentence.Remove(len)) + sentence[len];
-            return newSentence = GetWordTranslation(sentence);
+                return GetWordTranslation(sentence.Remove(len)) + sentence[len];
+            return GetWordTranslation(sentence);
         }
 
         // Тут мы будем переводить слова, обращаясь к словарю.
