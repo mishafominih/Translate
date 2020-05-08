@@ -14,7 +14,7 @@ namespace Translate
 		[STAThread]
 		static void Main()
 		{
-			Application.Run(new Form1());
+			Application.Run(new Menu());
 		}
 	}
 }
