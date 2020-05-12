@@ -18,8 +18,17 @@ namespace Translate
 		{
 			var lite = new Button();
 			var pro = new Button();
-			MyButton.WorkWithButton(lite, new Rectangle(361, 485, 241, 49), "Lite", this, new LiteTranslate());
-			MyButton.WorkWithButton(pro, new Rectangle(676, 485, 241, 49), "Pro", this, new ProMenu());
+			CreateButton(lite, new Rectangle(361, 485, 241, 49), "Lite");
+			CreateButton(pro, new Rectangle(676, 485, 241, 49), "Pro");
+		}
+
+		private void CreateButton(Button button, Rectangle rec, string text)
+		{
+			button.Bounds = rec;
+			button.Text = text;
+			button.BackColor = Color.FromArgb(138, 154, 169);
+			//button.Font = new Font("Merienda One");
+			Controls.Add(button);
 		}
 	}
 }

@@ -32,5 +32,3 @@ E:\Институт\С#\Проектная деятельность\Translate\Tr
 E:\Институт\С#\Проектная деятельность\Translate\Translate\bin\Debug\nunit.framework.xml
 E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.csproj.CopyComplete
 E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.Menu.resources
-E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.LiteTranslate.resources
-E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.ProMenu.resources

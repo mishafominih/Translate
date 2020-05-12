@@ -53,54 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddNewWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AddNewWord.Designer.cs">
-      <DependentUpon>AddNewWord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MyDictionary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MyDictionary.Designer.cs">
-      <DependentUpon>MyDictionary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LiteTranslate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LiteTranslate.Designer.cs">
-      <DependentUpon>LiteTranslate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ProMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ProMenu.Designer.cs">
-      <DependentUpon>ProMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ProTarnslate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ProTarnslate.Designer.cs">
-      <DependentUpon>ProTarnslate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyButton.cs" />
     <Compile Include="TranslateText.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Forms\Menu.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HelperTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextInformation.cs" />
-    <EmbeddedResource Include="Forms\LiteTranslate.resx">
-      <DependentUpon>LiteTranslate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Menu.resx">
+    <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProMenu.resx">
-      <DependentUpon>ProMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
