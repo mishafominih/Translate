@@ -20,8 +20,8 @@ namespace Translate
 		{
 			button.Click += (a, b) =>
 			{
-				form.ShowDialog();
-				thisForm.Close();
+				form.Show();
+				thisForm.Hide();
 			};
 		}
 
