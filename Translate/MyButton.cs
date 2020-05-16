@@ -16,6 +16,12 @@ namespace Translate
 			CreateForms(nextForm, button, thisForm);
 		}
 
+		public static void WorkWithButton(Button button, Rectangle rec, string text, Form thisForm)
+		{
+			CreateButton(button, rec, text, thisForm);
+			PaintButton(button);
+		}
+
 		private static void CreateForms(Form form, Button button, Form thisForm)
 		{
 			button.Click += (a, b) =>

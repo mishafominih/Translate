@@ -34,3 +34,6 @@ E:\Институт\С#\Проектная деятельность\Translate\Tr
 E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.Menu.resources
 E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.LiteTranslate.resources
 E:\Институт\С#\Проектная деятельность\Translate\Translate\obj\Debug\Translate.ProMenu.resources
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.LiteTranslate.resources
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.Menu.resources
+C:\Users\Misha\source\repos\Translate\Translate\obj\Debug\Translate.ProMenu.resources

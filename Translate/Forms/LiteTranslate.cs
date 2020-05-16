@@ -13,7 +13,9 @@ namespace Translate
 {
     public partial class LiteTranslate : Form
     {
-        public LiteTranslate()
+		TextBox inputTextBox;
+		TextBox outputTextBox;
+		public LiteTranslate()
         {
             ClientSize = new Size(1280, 720);
             BackgroundImage = Image.FromFile(new DirectoryInfo("Images") + @"\LiteTranslate.jpg");
@@ -21,9 +23,16 @@ namespace Translate
         }
 
         private void Initialize()
-        {
-            var inputTextBox = new TextBox();
-            var outputTextBox = new TextBox();
+		{
+			var buttonTranslate = new Button();
+			MyButton.WorkWithButton(buttonTranslate, new Rectangle(500, 132, 300, 49), "Перевести", this);
+			buttonTranslate.Click += (e, a) =>
+			{
+				outputTextBox.Text = TranslateText.GetTextTranslation(inputTextBox.Text);
+			};
+
+			inputTextBox = new TextBox();
+            outputTextBox = new TextBox();
             CreateTextBox(inputTextBox, 107, 204);
             CreateTextBox(outputTextBox, 691, 204);
         }
