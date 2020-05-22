@@ -36,7 +36,7 @@ namespace Translate
         // Тут мы будем переводить слова, обращаясь к словарю.
         private static string GetWordTranslation(string sentence)
         {
-            return sentence;
+			return Translator.TranslateWord(sentence);
         }
     }
 }

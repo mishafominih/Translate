@@ -20,7 +20,7 @@ namespace Translate
 
         public override int GetHashCode()
         {
-            return Original.GetHashCode() * DateForRevise.GetHashCode() + Translation.GetHashCode();
+            return Original.GetHashCode() + Translation.GetHashCode();
         }
     }
 }

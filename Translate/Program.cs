@@ -14,6 +14,7 @@ namespace Translate
 		[STAThread]
 		static void Main()
 		{
+			Translator.LoadDictionaryFrom("Dictionary.txt");
 			Application.Run(new Menu());
 		}
 	}
