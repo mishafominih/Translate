@@ -18,8 +18,10 @@ namespace Translate
 		{
 			var lite = new Button();
 			var pro = new Button();
-			MyButton.WorkWithButton(lite, new Rectangle(361, 485, 241, 49), "Lite", this, new LiteTranslate());
-			MyButton.WorkWithButton(pro, new Rectangle(676, 485, 241, 49), "Pro", this, new ProMenu());
+			ConstructorControls.WorkWithButton(lite, new Rectangle(361, 485, 241, 49), "lite", this, new LiteTranslate());
+			ConstructorControls.WorkWithButton(pro, new Rectangle(676, 485, 241, 49), "pro", this, new ProMenu());
+			Controls.Add(lite);
+			Controls.Add(pro);
 		}
 	}
 }

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Translate
 {
-	public static class MyButton
+	public static class ConstructorControls
 	{
 		private static StringFormat str = new StringFormat();
 
@@ -22,26 +22,26 @@ namespace Translate
 			PaintButton(button);
 		}
 
-		private static void CreateForms(Form form, Button button, Form thisForm)
+		public static void CreateForms(Form form, Button button, Form thisForm)
 		{
 			button.Click += (a, b) =>
 			{
-				form.Show();
 				thisForm.Hide();
+				form.Show();
 			};
 		}
 
-		private static void CreateButton(Button button, Rectangle rec, string text, Form thisForm)
+		public static void CreateButton(Button button, Rectangle rec, string text, Form thisForm)
 		{
 			button.Bounds = rec;
 			button.Text = text;
-			button.BackColor = Color.FromArgb(138, 154, 169);
+			button.BackColor = Color.Transparent;
 			button.ForeColor = Color.White;
 			button.Font = GetNewFont();
 			thisForm.Controls.Add(button);
 		}
 
-		private static Font GetNewFont()
+		public static Font GetNewFont()
 		{
 			var fontCollection = new PrivateFontCollection();
 			fontCollection.AddFontFile(@"Fonts\MeriendaBold.ttf");
@@ -49,14 +49,14 @@ namespace Translate
 			return new Font(family, 15);
 		}
 
-		private static void PaintButton(Button button)
+		public static void PaintButton(Button button)
 		{
 			button.Paint += (sender, e) =>
 			{
 				str.Alignment = StringAlignment.Center;
 				str.LineAlignment = StringAlignment.Center;
 				e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
-				e.Graphics.Clear(Color.FromArgb(197, 212, 217));
+				e.Graphics.Clear(Color.FromArgb(138, 154, 169));
 				var rec = button.ClientRectangle;
 				e.Graphics.DrawRectangle(new Pen(button.BackColor), rec);
 				e.Graphics.FillRectangle(new SolidBrush(button.BackColor), rec);
@@ -66,7 +66,7 @@ namespace Translate
 			};
 		}
 		
-		private static GraphicsPath RoundedRectangle(Rectangle rec, int roundSize)
+		public static GraphicsPath RoundedRectangle(Rectangle rec, int roundSize)
 		{
 			var gh = new GraphicsPath();
 			
@@ -80,5 +80,13 @@ namespace Translate
 			return gh;
 		}
 
+		public static void CreateTextBox(TextBox textBox, int x, int y, Form thisForm, int sizeX, int sizeY)
+		{
+			textBox.Multiline = true;
+			textBox.BackColor = Color.FromArgb(236, 236, 236);
+			textBox.Location = new Point(x, y);
+			textBox.Size = new Size(sizeX, sizeY);
+			thisForm.Controls.Add(textBox);
+		}
 	}
 }

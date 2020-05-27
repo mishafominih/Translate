@@ -1,13 +1,6 @@
-﻿using System; 
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Translate
@@ -26,9 +19,23 @@ namespace Translate
             var checkYourself = new Button();
             var dictionary = new Button();
             var addNewWord = new Button();
-            MyButton.WorkWithButton(checkYourself, new Rectangle(467, 266, 344, 49), "check yourself", this, new ProTarnslate());
-            MyButton.WorkWithButton(dictionary, new Rectangle(519, 359, 240, 49), "dictionary", this, new MyDictionary());
-            MyButton.WorkWithButton(addNewWord, new Rectangle(467, 451, 344, 49), "add a word", this, new AddNewWord());
+            var back = new Button();
+
+            ConstructorControls.CreateButton(back, new Rectangle(10, 50, 41, 36), "", this);
+            ConstructorControls.WorkWithButton(checkYourself, new Rectangle(467, 266, 344, 49), "check yourself", this, new ProTarnslate());
+            ConstructorControls.WorkWithButton(dictionary, new Rectangle(519, 359, 240, 49), "dictionary", this, new MyDictionary());
+            ConstructorControls.WorkWithButton(addNewWord, new Rectangle(467, 451, 344, 49), "add a word", this, new AddNewWord());
+            AddClicl(back);
+        }
+
+        private void AddClicl(Button button)
+        {
+            button.Click += (sender, e) =>
+            {
+                var form = new Menu();
+                Hide();
+                form.Show();
+            };
         }
     }
 }

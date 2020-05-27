@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Translate
@@ -25,24 +19,29 @@ namespace Translate
         private void Initialize()
 		{
 			var buttonTranslate = new Button();
-			MyButton.WorkWithButton(buttonTranslate, new Rectangle(500, 132, 300, 49), "Перевести", this);
+            var back = new Button();
+            ConstructorControls.CreateButton(back, new Rectangle(10, 50, 43, 36), "", this);
+            AddClick(back);
+            ConstructorControls.WorkWithButton(buttonTranslate, new Rectangle(500, 132, 300, 49), "Перевести", this);
 			buttonTranslate.Click += (e, a) =>
 			{
 				outputTextBox.Text = TranslateText.GetTextTranslation(inputTextBox.Text);
 			};
+            Controls.Add(buttonTranslate);
 
-			inputTextBox = new TextBox();
+            inputTextBox = new TextBox();
             outputTextBox = new TextBox();
-            CreateTextBox(inputTextBox, 107, 204);
-            CreateTextBox(outputTextBox, 691, 204);
+            ConstructorControls.CreateTextBox(inputTextBox, 107, 204, this, 500, 411);
+            ConstructorControls.CreateTextBox(outputTextBox, 691, 204, this, 500, 411);
         }
-
-        private void CreateTextBox(TextBox textBox, int x, int y)
+        private void AddClick(Button button)
         {
-            textBox.Multiline = true;
-            textBox.Location = new Point(x, y);
-            textBox.Size = new Size(500, 411);
-            Controls.Add(textBox);
+            button.Click += (sender, e) =>
+            {
+                var form = new Menu();
+                Hide();
+                form.Show();
+            };
         }
     }
 }

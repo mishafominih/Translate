@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Translate
@@ -24,17 +18,21 @@ namespace Translate
         {
             var inputTextBox = new TextBox();
             var outputTextBox = new TextBox();
-            CreateTextBox(inputTextBox, 99, 148);
-            CreateTextBox(outputTextBox, 559, 148);
+            var back = new Button();
+            ConstructorControls.CreateButton(back, new Rectangle(10, 45, 41, 36), "", this);
+            AddClick(back);
+            ConstructorControls.CreateTextBox(inputTextBox, 99, 148, this, 449, 480);
+            ConstructorControls.CreateTextBox(outputTextBox, 559, 148, this, 449, 480);
         }
 
-        private void CreateTextBox(TextBox textBox, int x, int y)
+        private void AddClick(Button button)
         {
-            textBox.Multiline = true;
-            textBox.BackColor = Color.FromArgb(236, 236, 236);
-            textBox.Location = new Point(x, y);
-            textBox.Size = new Size(449, 480);
-            Controls.Add(textBox);
+            button.Click += (a, b) =>
+            {
+                var form = new ProMenu();
+                Hide();
+                form.Show();
+            };
         }
     }
 }
