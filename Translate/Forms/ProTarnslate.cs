@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
+
 namespace Translate
 {
     public partial class ProTarnslate : Form
@@ -23,6 +24,13 @@ namespace Translate
             AddClick(back);
             ConstructorControls.CreateTextBox(inputTextBox, 99, 148, this, 449, 480);
             ConstructorControls.CreateTextBox(outputTextBox, 559, 148, this, 449, 480);
+			var btn = new Button();
+			ConstructorControls.WorkWithButton(btn, new Rectangle(0, 0, 200, 50), "сравнить", this);
+			btn.Click += (e, a) =>
+			{
+				var text1 = TranslateText.GetTextTranslation(inputTextBox.Text);
+				var text2 = outputTextBox.Text;
+			};
         }
 
         private void AddClick(Button button)
