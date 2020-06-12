@@ -85,6 +85,7 @@
       <DependentUpon>ProTarnslate.cs</DependentUpon>
     </Compile>
     <Compile Include="ConstructorControls.cs" />
+    <Compile Include="LeveinshteinCalculator.cs" />
     <Compile Include="RevisingTask.cs" />
     <Compile Include="TranslateText.cs" />
     <Compile Include="Helper.cs" />

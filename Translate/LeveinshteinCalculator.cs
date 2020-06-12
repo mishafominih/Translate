@@ -7,7 +7,7 @@ namespace Translate
 {
 	public class LevenshteinCalculator
 	{
-		public double GetCompare(DocumentTokens document1, DocumentTokens document2)
+		public static double GetCompare(DocumentTokens document1, DocumentTokens document2)
 		{
 			var arr = InitialiseArray(document1, document2);
 			FillArray(document1, document2, arr);

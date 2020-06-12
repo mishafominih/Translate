@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -30,6 +31,20 @@ namespace Translate
 			{
 				var text1 = TranslateText.GetTextTranslation(inputTextBox.Text);
 				var text2 = outputTextBox.Text;
+				btn.Text = LevenshteinCalculator.GetCompare(text1.Split(' ')
+					.Select(x =>
+					{
+						if (!Char.IsLetter(x, x.Length - 1))
+							return x.Remove(x.Length - 1);
+						return x;
+					}).ToList(), text2.Split(' ')
+					.Select(x =>
+					{
+						if (!Char.IsLetter(x, x.Length - 1))
+							return x.Remove(x.Length - 1);
+						return x;
+					}).ToList()
+					).ToString();
 			};
         }
 
