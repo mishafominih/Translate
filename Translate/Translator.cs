@@ -6,7 +6,7 @@ using System.Text;
 
 public static class Translator
 {
-        private static Dictionary<string, string> KnownWords = new Dictionary<string, string>();
+        public static Dictionary<string, string> KnownWords = new Dictionary<string, string>();
 
         public static Dictionary<string, string> LoadDictionaryFrom(string path)
         {

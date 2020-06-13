@@ -19,12 +19,16 @@ namespace Translate
         {
             var addWord = new Button();
             var rec = new Rectangle(560, 138, 64, 54);
-            ConstructorControls.WorkWithButton(addWord, rec, "enter", this);
             addWord.BackColor = Color.FromArgb(199, 214, 219);
             var wordTextBox = new TextBox();
             var translateTextBox = new TextBox();
             var backButton = new Button();
-            ConstructorControls.CreateButton(backButton, new Rectangle(15, 50, 41, 36), "", this);
+			ConstructorControls.WorkWithButton(addWord, rec, "добавить", this);
+			addWord.Click += (e, a) =>
+			{
+				Translator.KnownWords.Add(wordTextBox.Text, translateTextBox.Text);
+			};
+			ConstructorControls.CreateButton(backButton, new Rectangle(15, 50, 41, 36), "", this);
             AddClick(backButton);
             ConstructorControls.CreateTextBox(translateTextBox, 135, 285, this, 475, 224);
             ConstructorControls.CreateTextBox(wordTextBox, 136, 138, this, 402, 54);

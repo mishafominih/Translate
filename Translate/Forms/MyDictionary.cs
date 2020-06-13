@@ -28,8 +28,12 @@ namespace Translate
             ConstructorControls.CreateTextBox(textBox2, 740, 318, this, 427, 107);
             ConstructorControls.CreateTextBox(textBox3, 740, 490, this, 427, 107);
             ConstructorControls.CreateButton(back, new Rectangle(10, 50, 41, 36), "", this);
-            ConstructorControls.WorkWithButton(checkWord, rec, "enter", this);
-            checkWord.BackColor = Color.FromArgb(199, 214, 219);
+			ConstructorControls.WorkWithButton(checkWord, rec, "перевести", this);
+			checkWord.Click += (e, a) =>
+			{
+				textBox1.Text = Translator.TranslateWord(enterWord.Text);
+			};
+			checkWord.BackColor = Color.FromArgb(199, 214, 219);
             AddClick(back);
         }
 
