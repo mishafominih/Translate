@@ -131,3 +131,11 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+.vs/Translate/v16/Server/sqlite3/storage.ide
+Translate/bin/Debug/Translate.exe
+Translate/bin/Debug/Translate.pdb
+Translate/Forms/LiteTranslate.cs
+Translate/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+Translate/obj/Debug/Translate.csprojAssemblyReference.cache
+Translate/obj/Debug/Translate.exe
+Translate/obj/Debug/Translate.pdb
