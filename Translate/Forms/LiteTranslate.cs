@@ -22,7 +22,7 @@ namespace Translate
             var back = new Button();
             ConstructorControls.CreateButton(back, new Rectangle(10, 50, 43, 36), "", this);
             AddClick(back);
-            ConstructorControls.WorkWithButton(buttonTranslate, new Rectangle(500, 132, 300, 49), "Перевести", this);
+            ConstructorControls.WorkWithButton(buttonTranslate, new Rectangle(500, 132, 300, 49), "Translate", this);
 			buttonTranslate.Click += (e, a) =>
 			{
 				outputTextBox.Text = TranslateText.GetTextTranslation(inputTextBox.Text);
